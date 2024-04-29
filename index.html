@@ -26,8 +26,8 @@
           >
 
           <ul class="nav">
-            <li class="item">
-              <a href="./index.html" class="navg" style="color: #2196f3"
+            <li class="item ">
+              <a href="./index.html" class="navg current " style="color: #2196f3"
                 >Студія</a
               >
             </li>
@@ -59,7 +59,16 @@
       <section class="hero">
         <div class="container">
           <h1 class="h1">Ефективні рішення для вашого бізнесу</h1>
-          <button class="main-but">Замовити послугу</button>
+          <button  class="main-but" data-modal-open>Замовити послугу</button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div  class="modal">
+            <button data-modal-close class="modal-button">
+              <svg width="30" height="30" >
+                <use href="./images/symbol-defs.svg#close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -127,6 +136,9 @@
                 width="370"
                 height="294"
               />
+              <div class="image-content">
+                <p class="text">Десктопні додатки</p>
+              </div>
             </li>
             <li class="item">
               <img
@@ -135,6 +147,10 @@
                 width="370"
                 height="294"
               />
+              <div class="image-content">
+                <p class="text">Мобільні додатки</p>
+              </div>
+
             </li>
             <li class="item">
               <img
@@ -143,6 +159,9 @@
                 width="370"
                 height="294"
               />
+              <div class="image-content">
+                <p class="text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -361,5 +380,6 @@
       </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
