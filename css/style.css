@@ -176,11 +176,13 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   z-index: 2;
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transform: scale(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
+  transform: scale(0);
   pointer-events: none;
 }
 .modal {
@@ -195,6 +197,17 @@ img {
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
   background: #fff;
+  
+  transition:scale(100%) 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
+.modal.is-hidden{
+  opacity: 0;
+    top: 50%;
+  left: 50%;
+  transform: scale(0);
+  pointer-events: none;
 }
 .modal-button {
   position: absolute;
@@ -362,7 +375,7 @@ ul {
   padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .filters:hover,
